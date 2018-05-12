@@ -1,4 +1,9 @@
 package auto.utility;
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 12-May-18
+ */
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -6,8 +11,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class Init {
-    public WebDriver driver = null;
+    protected WebDriver driver = null;
 
+    /**
+     * This function is used for doing web driver setup.
+     */
     @BeforeMethod
     public void setUp() {
         System.out.println("*** Setup ***");
@@ -16,10 +24,14 @@ public class Init {
 
     }
 
+    /**
+     * This function is quit the driver instance.
+     */
     @AfterMethod
     public void teardown() {
         System.out.println("*** Teardown ***");
-        driver.quit();
+        if (driver != null)
+            driver.quit();
 
     }
 
