@@ -15,16 +15,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Services {
 
-  WebDriver driver;
+    WebDriver driver;
 
-  public Services(WebDriver driver) {
-    this.driver = driver;
-  }
+    public Services(WebDriver driver) {
+        this.driver = driver;
+    }
 
-  public void waitForElement(String locator) {
+    public void waitForElement(String locator) {
 
-    new WebDriverWait(driver, 20)
-        .until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+        new WebDriverWait(driver, 20)
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
 
-  }
+    }
 }
