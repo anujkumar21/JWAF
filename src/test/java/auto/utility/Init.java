@@ -5,12 +5,11 @@ package auto.utility;
  * Date: 12-May-18
  */
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
-import java.util.concurrent.TimeUnit;
 
 public class Init {
     protected WebDriver driver = null;

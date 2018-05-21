@@ -5,13 +5,13 @@ package auto.pages;
  * Date: 12-May-18
  */
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import java.util.List;
-
-import static org.testng.Assert.*;
 
 public class CheckboxesPage {
 
