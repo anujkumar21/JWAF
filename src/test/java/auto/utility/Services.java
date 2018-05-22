@@ -1,10 +1,10 @@
 package auto.utility;
 
-import java.util.NoSuchElementException;
 /**
  * Created by: Anuj Kumar Email: cdac.anuj@gmail.com Date: 14-May-18 Time: 8:19 PM
  */
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -27,23 +27,28 @@ public class Services {
 
   public void assertAndClick(String locator) {
 
-    verifyElementPresentByXpath(locator);
+    assertElementPresentByXpath(locator);
     driver.findElement(By.xpath(locator)).click();
 
   }
-  
+
   public void assertAndType(String locator, String text) {
 
-    verifyElementPresentByXpath(locator);
+    assertElementPresentByXpath(locator);
     driver.findElement(By.xpath(locator)).sendKeys(text);;
 
   }
 
 
 
-  public void verifyElementPresentByXpath(String locator) {
+  public void assertElementPresentByXpath(String locator) {
     System.out.println("# Verifying element.");
     Assert.assertTrue(isElementPresent(locator), "Element " + locator + " not found.");
+  }
+
+  public void assertElementNotPresentByXpath(String locator) {
+    System.out.println("# Verifying element.");
+    Assert.assertFalse(isElementPresent(locator), "Element " + locator + " is found.");
   }
 
   public boolean isElementPresent(String locator) {
@@ -51,12 +56,43 @@ public class Services {
       driver.findElement(By.xpath(locator));
       return true;
     } catch (NoSuchElementException e) {
-
       return false;
     }
 
   }
 
+
+  public boolean isElementVisible(String locator) {
+
+    try {
+      return driver.findElement(By.xpath(locator)).isDisplayed();
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+
+  }
+
+  public void assertElementVisible(String locator, boolean isVisible) {
+    System.out.println("# Verifying element visibility.");
+
+    if (isVisible)
+      Assert.assertTrue(isElementVisible(locator), "Element " + locator + " should be visible.");
+    else
+      Assert.assertFalse(isElementVisible(locator),
+          "Element " + locator + " should not be visible.");
+  }
+
+  public void waitForElementVisible(String locator) {
+
+    new WebDriverWait(driver, 20)
+        .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+  }
+
+  public void waitForElementInVisible(String locator) {
+
+    new WebDriverWait(driver, 20)
+        .until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
+  }
 
 
 }

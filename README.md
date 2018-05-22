@@ -25,9 +25,9 @@ Page Object Model (POM) is used to  make the code more readable, maintainable, a
 |                           |                                 |        |
 | Locators                  | Learning how to get locators.   |        |
 |                           |                                 |        |
-| Functionality To Automate | Challenging DOM                 |        |
+| Functionality To Automate | Challenging DOM                 | Done   |
 |                           | Checkboxes                      | Done   |
-|                           | Context Menu                    |        |
+|                           | Context Menu                    | Done   |
 |                           | Disappearing Elements           |        |
 |                           | Drag and Drop                   |        |
 |                           | Dropdown                        | Done   |

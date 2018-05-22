@@ -5,10 +5,10 @@ package auto.testcases;
  * Date: 12-May-18
  */
 
+import org.testng.annotations.Test;
 import auto.pages.DropdownPage;
 import auto.pages.WelcomePage;
 import auto.utility.Init;
-import org.testng.annotations.Test;
 
 public class TestDropdownPage extends Init {
 
