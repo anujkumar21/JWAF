@@ -43,8 +43,5 @@ public class HoverPage extends Services {
     waitForElementVisible(xpathName1);
     assertElementPresentByXpath(xpathName1);
     System.out.println(driver.findElement(By.xpath(xpathName1)).getText());
-
-
-
   }
 }
