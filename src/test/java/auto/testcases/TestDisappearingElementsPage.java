@@ -1,8 +1,9 @@
 package auto.testcases;
 /**
  * Created by: Anuj Kumar Email: cdac.anuj@gmail.com Date: 21-May-18
- */ 
+ */
 
+import java.util.List;
 import org.testng.annotations.Test;
 import auto.pages.DisappearingElementsPage;
 import auto.pages.WelcomePage;
@@ -19,6 +20,9 @@ public class TestDisappearingElementsPage extends Init {
 
     DisappearingElementsPage disappearingElementsPage = new DisappearingElementsPage(driver);
     disappearingElementsPage.verifyDisappearingElementsPageHeader();
+    List<String> tabNames = disappearingElementsPage.getAllTabsName();
+    System.out.println(tabNames);
+    disappearingElementsPage.verifyDisappearTab("Gallery");
     Thread.sleep(5000);
 
   }

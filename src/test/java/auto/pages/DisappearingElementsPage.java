@@ -4,6 +4,8 @@ package auto.pages;
  */
 
 import static org.testng.Assert.assertEquals;
+import java.util.ArrayList;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +17,8 @@ public class DisappearingElementsPage extends Services {
 
   String xpathHeading = "//h3";
   private String xpathMenu = "//ul//li//a";
-  private String xpathMenuByTxt = xpathMenu+"[text()='**txt**']";
+  private String xpathMenuByTxt = xpathMenu + "[text()='**txt**']";
+
 
 
   public DisappearingElementsPage(WebDriver driver) {
@@ -29,5 +32,27 @@ public class DisappearingElementsPage extends Services {
         "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
   }
 
-  
+  public List<String> getAllTabsName() {
+    List<String> tabNames = new ArrayList<String>();
+
+    List<WebElement> lstTabs = driver.findElements(By.xpath(xpathMenu));
+    for (int i = 0; i < lstTabs.size(); i++) {
+      WebElement ttab = lstTabs.get(i);
+      tabNames.add(ttab.getText());
+    }
+
+    return tabNames;
+  }
+
+  public void verifyDisappearTab(String tabName) {
+    String temp = xpathMenuByTxt.replace("**txt**", tabName);
+
+    do {
+      driver.navigate().refresh();
+      System.out.println("Is Present: " + isElementPresent(temp));
+    } while (!isElementPresent(temp));
+
+  }
+
+
 }
