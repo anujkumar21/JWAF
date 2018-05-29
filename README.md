@@ -28,25 +28,25 @@ Page Object Model (POM) is used to  make the code more readable, maintainable, a
 | Functionality To Automate | Challenging DOM                 | Done   |
 |                           | Checkboxes                      | Done   |
 |                           | Context Menu                    | Done   |
-|                           | Disappearing Elements           |        |
-|                           | Drag and Drop                   |        |
+|                           | Disappearing Elements           | Done       |
+|                           | Drag and Drop                   | Done       |
 |                           | Dropdown                        | Done   |
-|                           | Dynamic Content                 |        |
-|                           | Dynamic Controls                |        |
-|                           | Dynamic Loading                 |        |
+|                           | Dynamic Content                 | Done       |
+|                           | Dynamic Controls                | Done       |
+|                           | Dynamic Loading                 | Done       |
 |                           | File Download                   |        |
 |                           | File Upload                     |        |
 |                           | Floating Menu                   |        |
-|                           | Frames                          |        |
-|                           | Horizontal Slider               |        |
-|                           | Hovers                          |        |
+|                           | Frames                          | Done       |
+|                           | Horizontal Slider               | Done       |
+|                           | Hovers                          | Done       |
 |                           | Infinite Scroll                 |        |
 |                           | JQuery UI Menus                 |        |
 |                           | JavaScript Alerts               |        |
 |                           | Key Presses                     |        |
 |                           | Large & Deep DOM                |        |
-|                           | Multiple Windows                |        |
-|                           | Nested Frames                   |        |
+|                           | Multiple Windows                | Done       |
+|                           | Nested Frames                   |  Done      |
 |                           | Notification Messages           |        |
 |                           | Redirect Link                   |        |
 |                           | Shifting Content                |        |
