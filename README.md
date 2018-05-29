@@ -36,14 +36,14 @@ Page Object Model (POM) is used to  make the code more readable, maintainable, a
 |                           | Dynamic Loading                 | Done       |
 |                           | File Download                   |        |
 |                           | File Upload                     |        |
-|                           | Floating Menu                   |        |
+|                           | Floating Menu                   | Done       |
 |                           | Frames                          | Done       |
 |                           | Horizontal Slider               | Done       |
 |                           | Hovers                          | Done       |
-|                           | Infinite Scroll                 |        |
+|                           | Infinite Scroll                 | Done       |
 |                           | JQuery UI Menus                 |        |
-|                           | JavaScript Alerts               |        |
-|                           | Key Presses                     |        |
+|                           | JavaScript Alerts               | Done       |
+|                           | Key Presses                     | Done       |
 |                           | Large & Deep DOM                |        |
 |                           | Multiple Windows                | Done       |
 |                           | Nested Frames                   |  Done      |
