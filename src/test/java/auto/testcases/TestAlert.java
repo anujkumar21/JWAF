@@ -5,13 +5,12 @@ package auto.testcases;
 
 import org.testng.annotations.Test;
 import auto.pages.AlertPage;
-import auto.pages.HoverPage;
 import auto.pages.WelcomePage;
 import auto.utility.Init;
 
 public class TestAlert extends Init {
 
-  @Test
+  @Test(groups = {"smoke", "regression"})
   public void testClickForJSAlert() throws InterruptedException {
 
     WelcomePage welcomePage = new WelcomePage(driver);
@@ -24,7 +23,7 @@ public class TestAlert extends Init {
 
   }
 
-  @Test
+  @Test(groups = {"regression"})
   public void testClickForJSConfirm() throws InterruptedException {
 
     WelcomePage welcomePage = new WelcomePage(driver);
