@@ -1,37 +1,39 @@
 package auto.testcases;
 /**
- * Created by: Anuj Kumar Email: cdac.anuj@gmail.com Date: 21-May-18
- */ 
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 21-May-18
+ */
 
-import org.testng.annotations.Test;
 import auto.pages.DynamicControlsPage;
 import auto.pages.WelcomePage;
 import auto.utility.Init;
+import org.testng.annotations.Test;
 
 public class TestDynamicControls extends Init {
 
-  @Test
-  public void testDynamicControlsRemove() throws InterruptedException {
+    @Test
+    public void testDynamicControlsRemove() {
 
-    WelcomePage welcomePage = new WelcomePage(driver);
-    welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Controls");
+        WelcomePage welcomePage = new WelcomePage(driver);
+        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Controls");
 
-    DynamicControlsPage controlsPage = new DynamicControlsPage(driver);
-    controlsPage.verifyDynamicControlsPageHeader();
-    controlsPage.verifyRemove();
+        DynamicControlsPage controlsPage = new DynamicControlsPage(driver);
+        controlsPage.verifyDynamicControlsPageHeader();
+        controlsPage.verifyRemove();
 
-  }
+    }
 
-  @Test
-  public void testDynamicControlsAdd() throws InterruptedException {
+    @Test
+    public void testDynamicControlsAdd() {
 
-    WelcomePage welcomePage = new WelcomePage(driver);
-    welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Controls");
+        WelcomePage welcomePage = new WelcomePage(driver);
+        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Controls");
 
-    DynamicControlsPage controlsPage = new DynamicControlsPage(driver);
-    controlsPage.verifyDynamicControlsPageHeader();
-    controlsPage.verifyAdd();
+        DynamicControlsPage controlsPage = new DynamicControlsPage(driver);
+        controlsPage.verifyDynamicControlsPageHeader();
+        controlsPage.verifyAdd();
 
-  }
+    }
 
 }

@@ -5,10 +5,10 @@ package auto.testcases;
  * Date: 12-May-18
  */
 
-import org.testng.annotations.Test;
 import auto.pages.DropdownPage;
 import auto.pages.WelcomePage;
 import auto.utility.Init;
+import org.testng.annotations.Test;
 
 public class TestDropdownPage extends Init {
 
@@ -23,8 +23,8 @@ public class TestDropdownPage extends Init {
         //dropdownPage.selectDropDown(1);
         dropdownPage.selectDropDown("Option 2");
         //dropdownPage.selectDropDownByValue("2");
-        
-        
+
+
         Thread.sleep(3000);
 
     }

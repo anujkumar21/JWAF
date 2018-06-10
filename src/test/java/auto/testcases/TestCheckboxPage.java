@@ -1,5 +1,8 @@
 package auto.testcases;
 
+import auto.pages.CheckboxesPage;
+import auto.pages.WelcomePage;
+import auto.utility.Init;
 import org.testng.annotations.Test;
 
 /**
@@ -7,10 +10,6 @@ import org.testng.annotations.Test;
  * Email: cdac.anuj@gmail.com
  * Date: 12-May-18
  */
-
-import auto.pages.CheckboxesPage;
-import auto.pages.WelcomePage;
-import auto.utility.Init;
 
 public class TestCheckboxPage extends Init {
 

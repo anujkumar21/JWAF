@@ -1,46 +1,46 @@
 package auto.pages;
 
 /**
- * Created by: Anuj Kumar Email: cdac.anuj@gmail.com Date: 21-May-18
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 21-May-18
  */
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import auto.utility.Services;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
-import auto.utility.Services;
+
+import static org.testng.Assert.assertEquals;
 
 public class KeyPressesPage extends Services {
 
-  private final static String HEADING = "Key Presses";
-  private String xpathHeading = "//h3";
+    private final static String HEADING = "Key Presses";
+    private String xpathHeading = "//h3";
 
-  private String xpathResult = "//p[@id='result']";
+    private String xpathResult = "//p[@id='result']";
 
 
+    public KeyPressesPage(WebDriver driver) {
+        super(driver);
+    }
 
-  public KeyPressesPage(WebDriver driver) {
-    super(driver);
-  }
+    public void verifyKeyPressesPageHeader() {
+        waitForElement(xpathHeading);
+        WebElement headerEle = driver.findElement(By.xpath(xpathHeading));
+        String actualHeading = headerEle.getText();
+        assertEquals(actualHeading, HEADING,
+                "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
+    }
 
-  public void verifyKeyPressesPageHeader() {
-    waitForElement(xpathHeading);
-    WebElement headerEle = driver.findElement(By.xpath(xpathHeading));
-    String actualHeading = headerEle.getText();
-    assertEquals(actualHeading, HEADING,
-        "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
-  }
+    public void pressAnyKey() {
 
-  public void pressAnyKey() {
+        Actions actions = new Actions(driver);
 
-    Actions actions = new Actions(driver);
-
-    actions.sendKeys(Keys.NUMPAD5).build().perform();
-  }
+        actions.sendKeys(Keys.NUMPAD5).build().perform();
+    }
 
 
 }
