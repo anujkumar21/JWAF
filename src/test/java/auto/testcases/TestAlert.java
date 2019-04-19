@@ -39,7 +39,7 @@ public class TestAlert extends Init {
 
     }
 
-    @Test
+    @Test(groups = {"alert"})
     public void testClickForJSPrompt() {
 
         WelcomePage welcomePage = new WelcomePage(driver);
