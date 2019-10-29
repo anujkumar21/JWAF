@@ -18,8 +18,8 @@ public class CheckboxesPage {
     final static String HEADING = "Checkboxes";
     WebDriver driver;
     String xpathHeading = "//h3";
-    String xpathCheckbox = "//form[@id='checkboxes']/input[**index**]";
-    String xpathCheckboxes = "//form[@id='checkboxes']/input";
+    private String xpathCheckbox = "//form[@id='checkboxes']/input[**index**]";
+    private String xpathCheckboxes = "//form[@id='checkboxes']/input";
 
     public CheckboxesPage(WebDriver driver) {
         this.driver = driver;
@@ -42,7 +42,6 @@ public class CheckboxesPage {
     public void clickOnCheckbox(int index, boolean toSelect) {
         String xpath = xpathCheckbox.replace("**index**", index + "");
         WebElement checkboxEle = driver.findElement(By.xpath(xpath));
-
         changeStatus(checkboxEle, toSelect);
     }
 
@@ -59,12 +58,8 @@ public class CheckboxesPage {
     }
 
     public void toSelectAllCheckboxes(boolean toSelect) {
-        List<WebElement> checkboxeEles = driver.findElements(By.xpath(xpathCheckboxes));
-
-        for (WebElement ch : checkboxeEles) {
+        List<WebElement> checkboxEles = driver.findElements(By.xpath(xpathCheckboxes));
+        for (WebElement ch : checkboxEles)
             changeStatus(ch, toSelect);
-        }
-
     }
-
 }

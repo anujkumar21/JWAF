@@ -13,17 +13,12 @@ import org.testng.annotations.Test;
 public class TestFileUploader extends Init {
 
     @Test
-    public void testFrame() throws InterruptedException {
-
+    public void testFrame() {
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("File Upload");
 
         FileUploaderPage fileUploaderPage = new FileUploaderPage(driver);
         fileUploaderPage.verifyFileUploaderHeader();
         fileUploaderPage.verifyFileUpload();
-
-        Thread.sleep(5000);
     }
-
-
 }

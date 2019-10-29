@@ -5,7 +5,7 @@ package auto.testcases;
  * Date: 21-May-18
  */
 
-import auto.pages.DynamicloadingsPage;
+import auto.pages.DynamicLoadingsPage;
 import auto.pages.WelcomePage;
 import auto.utility.Init;
 import org.testng.annotations.Test;
@@ -14,29 +14,23 @@ public class TestDynamicLoadings extends Init {
 
     @Test
     public void testDynamicLoadingsHidden() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Loading");
 
-        DynamicloadingsPage dynamicloadingsPage = new DynamicloadingsPage(driver);
+        DynamicLoadingsPage dynamicloadingsPage = new DynamicLoadingsPage(driver);
         dynamicloadingsPage.verifyDynamicControlsPageHeader();
         dynamicloadingsPage.clickOnLink("Example 1");
         dynamicloadingsPage.makeHiddenElementVisible();
-
     }
 
     @Test
     public void testDynamicLoadingsRender() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Loading");
 
-        DynamicloadingsPage dynamicloadingsPage = new DynamicloadingsPage(driver);
+        DynamicLoadingsPage dynamicloadingsPage = new DynamicLoadingsPage(driver);
         dynamicloadingsPage.verifyDynamicControlsPageHeader();
         dynamicloadingsPage.clickOnLink("Example 2");
         dynamicloadingsPage.renderNewElement();
-
     }
-
-
 }

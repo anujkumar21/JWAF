@@ -14,7 +14,6 @@ public class TestChallengingDomPage extends Init {
 
     @Test
     public void testChallengingPage() throws InterruptedException {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Challenging DOM");
 
@@ -26,8 +25,5 @@ public class TestChallengingDomPage extends Init {
         System.out.println(challengingDomPage.getColumnIndex("Sit"));
 
         System.out.println(challengingDomPage.getCellText(3, "Sit"));
-        Thread.sleep(5000);
-
     }
-
 }

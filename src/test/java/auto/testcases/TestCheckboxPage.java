@@ -15,7 +15,6 @@ public class TestCheckboxPage extends Init {
 
     @Test
     public void testCheckboxPage() {
-        System.out.println("testMe");
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Checkboxes");
 
@@ -25,26 +24,20 @@ public class TestCheckboxPage extends Init {
 
     @Test
     public void testCheckboxViaSmartWay() throws InterruptedException {
-        System.out.println("testMe");
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Checkboxes");
 
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
         checkboxesPage.verifyCheckboxPageHeader().clickOnCheckbox(2, false);
-
-        Thread.sleep(5000);
     }
 
     @Test
     public void testToSelectAllCheckboxes() throws InterruptedException {
-        System.out.println("testMe");
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Checkboxes");
 
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
         checkboxesPage.verifyCheckboxPageHeader().toSelectAllCheckboxes(false);
-
-        Thread.sleep(5000);
     }
 
 }

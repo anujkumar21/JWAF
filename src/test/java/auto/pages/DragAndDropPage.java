@@ -35,18 +35,10 @@ public class DragAndDropPage extends Services {
     }
 
     public void dragAtoB() {
-
         WebElement eleA = driver.findElement(By.xpath(xpathA));
         WebElement eleB = driver.findElement(By.xpath(xpathB));
-
         Actions actions = new Actions(driver);
         actions.dragAndDrop(eleA, eleB).build().perform();
         actions.clickAndHold(eleA).moveToElement(eleB).build().perform();
-
-        //Thread.sleep(3000);
-
-
     }
-
-
 }

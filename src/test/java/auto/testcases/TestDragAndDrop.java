@@ -14,7 +14,6 @@ public class TestDragAndDrop extends Init {
 
     @Test
     public void testDragAndDrop() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Drag and Drop");
 
@@ -22,6 +21,4 @@ public class TestDragAndDrop extends Init {
         dragAndDropPage.verifyDragAndDropPageHeader();
         dragAndDropPage.dragAtoB();
     }
-
-
 }

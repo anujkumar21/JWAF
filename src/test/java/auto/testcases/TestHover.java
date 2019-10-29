@@ -14,15 +14,11 @@ public class TestHover extends Init {
 
     @Test
     public void testFrame() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Hovers");
 
         HoverPage hoverPage = new HoverPage(driver);
         hoverPage.verifyHoversPageHeader();
         hoverPage.hoverOnImage();
-
     }
-
-
 }

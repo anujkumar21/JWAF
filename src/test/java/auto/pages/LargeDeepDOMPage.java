@@ -51,23 +51,15 @@ public class LargeDeepDOMPage extends Services {
     public void getParent(String cellText) {
         String xpath = DOM_ELE_XPATH.replace("**dynamic**", cellText);
         WebElement currEle = driver.findElement(By.xpath(xpath));
-
         WebElement parent =
                 driver.findElement(By.xpath(xpath + "/parent::div[contains(@class,'parent')]"));
-
         System.out.println("Parent of " + currEle.getText() + ": " + parent.getText());
-
     }
 
     public void getAncestor(String cellText) {
         String xpath = DOM_ELE_XPATH.replace("**dynamic**", cellText);
         WebElement currEle = driver.findElement(By.xpath(xpath));
-
         WebElement parent = driver.findElement(By.xpath(xpath + "/ancestor::div[@class='row']//h3"));
-
         System.out.println("Ancestor of " + currEle.getText() + ": " + parent.getText());
-
     }
-
-
 }

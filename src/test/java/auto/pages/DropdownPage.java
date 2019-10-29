@@ -35,10 +35,8 @@ public class DropdownPage extends Services {
     public void selectDropDown(int index) {
         waitForElement(xpathDropdown);
         WebElement ele = driver.findElement(By.xpath(xpathDropdown));
-
         Select select = new Select(ele);
         select.selectByIndex(index);
-
     }
 
     public void selectDropDown(String text) {
@@ -50,7 +48,6 @@ public class DropdownPage extends Services {
         String actual = select.getFirstSelectedOption().getText();
 
         assertEquals(actual, text, "Actual " + actual + " should be same as expected " + text);
-
     }
 
     public void selectDropDownByValue(String text) {
@@ -59,8 +56,6 @@ public class DropdownPage extends Services {
 
         Select select = new Select(ele);
         select.selectByValue(text);
-
-
     }
 
 }

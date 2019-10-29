@@ -27,21 +27,17 @@ public class FileUploaderPage extends Services {
         this.driver = driver;
     }
 
-    public FileUploaderPage verifyFileUploaderHeader() {
+    public void verifyFileUploaderHeader() {
         WebElement headerEle = driver.findElement(By.xpath(xpathHeading));
         String actualHeading = headerEle.getText();
         assertEquals(actualHeading, HEADING,
                 "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
-        return this;
     }
 
     public void verifyFileUpload() {
-
         assertAndType(xpathChooseFile, "E:\\eclipse\\selLearning\\download\\menu.pdf");
         assertAndClick(xpathBtn);
         waitForElement(xpathResult);
         assertEquals("menu.pdf", getWebElement(xpathResult).getText().trim());
-
     }
-
 }

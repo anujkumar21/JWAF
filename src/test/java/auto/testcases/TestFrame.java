@@ -14,7 +14,6 @@ public class TestFrame extends Init {
 
     @Test
     public void testFrame() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Frames");
 
@@ -22,13 +21,10 @@ public class TestFrame extends Init {
         framesPage.verifyFramesPageHeader();
         framesPage.clickOnLink("Nested Frames");
         framesPage.getFrameText();
-
     }
-
 
     @Test
     public void testIFrame() throws InterruptedException {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Frames");
 
@@ -36,8 +32,5 @@ public class TestFrame extends Init {
         framesPage.verifyFramesPageHeader();
         framesPage.clickOnLink("iFrame");
         framesPage.getIFrame();
-
     }
-
-
 }

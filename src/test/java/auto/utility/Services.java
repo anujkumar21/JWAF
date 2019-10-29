@@ -7,8 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
+import static org.apache.log4j.Logger.getLogger;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
@@ -20,7 +20,7 @@ import static org.testng.Assert.assertTrue;
  */
 
 public class Services {
-    private static Logger logger = Logger.getLogger(Services.class.getName());
+    private static Logger logger = getLogger(Services.class.getName());
     protected WebDriver driver;
 
     public Services(WebDriver driver) {
@@ -86,6 +86,5 @@ public class Services {
 
     protected WebElement getWebElement(String xpath) {
         return driver.findElement(By.xpath(xpath));
-
     }
 }

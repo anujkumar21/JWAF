@@ -20,9 +20,6 @@ public class KeyPressesPage extends Services {
     private final static String HEADING = "Key Presses";
     private String xpathHeading = "//h3";
 
-    private String xpathResult = "//p[@id='result']";
-
-
     public KeyPressesPage(WebDriver driver) {
         super(driver);
     }
@@ -36,11 +33,7 @@ public class KeyPressesPage extends Services {
     }
 
     public void pressAnyKey() {
-
         Actions actions = new Actions(driver);
-
         actions.sendKeys(Keys.NUMPAD5).build().perform();
     }
-
-
 }

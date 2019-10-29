@@ -23,7 +23,6 @@ public class DisappearingElementsPage extends Services {
     private String xpathMenu = "//ul//li//a";
     private String xpathMenuByTxt = xpathMenu + "[text()='**txt**']";
 
-
     public DisappearingElementsPage(WebDriver driver) {
         super(driver);
     }
@@ -39,23 +38,17 @@ public class DisappearingElementsPage extends Services {
         List<String> tabNames = new ArrayList<String>();
 
         List<WebElement> lstTabs = driver.findElements(By.xpath(xpathMenu));
-        for (int i = 0; i < lstTabs.size(); i++) {
-            WebElement ttab = lstTabs.get(i);
+        for (WebElement ttab : lstTabs) {
             tabNames.add(ttab.getText());
         }
-
         return tabNames;
     }
 
     public void verifyDisappearTab(String tabName) {
         String temp = xpathMenuByTxt.replace("**txt**", tabName);
-
         do {
             driver.navigate().refresh();
             System.out.println("Is Present: " + isElementPresent(temp));
         } while (!isElementPresent(temp));
-
     }
-
-
 }

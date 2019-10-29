@@ -13,10 +13,7 @@ public class TestWelcomePage extends Init {
 
     @Test
     public void testWelcomePage() {
-        System.out.println("testMe");
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader();
-
     }
-
 }

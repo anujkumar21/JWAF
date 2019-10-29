@@ -35,8 +35,7 @@ public class HorizontalSliderPage extends Services {
                 "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
     }
 
-    public void hirizontalSlide() throws InterruptedException {
-
+    public void horizontalSlide() throws InterruptedException {
         WebElement ele = getWebElement(xpathSlider);
 
         Dimension dimension = ele.getSize();
@@ -47,7 +46,5 @@ public class HorizontalSliderPage extends Services {
         Actions actions = new Actions(driver);
         actions.dragAndDropBy(ele, dimension.getWidth(), 0).build().perform();
         Thread.sleep(3000);
-
-
     }
 }

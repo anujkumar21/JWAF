@@ -14,7 +14,6 @@ public class TestLargeDeepDOM extends Init {
 
     @Test
     public void testLargeDeepDOM() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Large & Deep DOM");
 
@@ -24,9 +23,5 @@ public class TestLargeDeepDOM extends Init {
 
         deepDOMPage.getParent("2.3");
         deepDOMPage.getAncestor("2.3");
-
-
     }
-
-
 }

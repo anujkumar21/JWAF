@@ -14,16 +14,11 @@ public class TestFileDownloader extends Init {
 
     @Test
     public void testFrame() throws InterruptedException {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("File Download");
 
         FileDownloaderPage downloaderPage = new FileDownloaderPage(driver);
         downloaderPage.verifyFileDownloaderHeader();
         downloaderPage.verifyFileDownload();
-
-        Thread.sleep(5000);
     }
-
-
 }

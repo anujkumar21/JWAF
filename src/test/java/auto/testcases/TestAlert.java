@@ -14,7 +14,6 @@ public class TestAlert extends Init {
 
     @Test(groups = {"smoke", "regression"})
     public void testClickForJSAlert() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("JavaScript Alerts");
 
@@ -27,7 +26,6 @@ public class TestAlert extends Init {
 
     @Test(groups = {"regression"})
     public void testClickForJSConfirm() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("JavaScript Alerts");
 
@@ -35,13 +33,10 @@ public class TestAlert extends Init {
         alertPage.verifyAlertPageHeader();
         alertPage.clickOnButton("Click for JS Confirm");
         alertPage.cancel();
-
-
     }
 
     @Test(groups = {"alert"})
     public void testClickForJSPrompt() {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("JavaScript Alerts");
 
@@ -49,9 +44,5 @@ public class TestAlert extends Init {
         alertPage.verifyAlertPageHeader();
         alertPage.clickOnButton("Click for JS Prompt");
         alertPage.typeAndAccept();
-
-
     }
-
-
 }

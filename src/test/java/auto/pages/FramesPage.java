@@ -39,15 +39,11 @@ public class FramesPage extends Services {
     }
 
     public void clickOnLink(String link) {
-
         String xpath = xpathLinks.replace("**link**", link);
         assertAndClick(xpath);
-
-
     }
 
     public void getFrameText() {
-
         waitForElement(xpathFrameBottom);
         WebElement bottomFrame = driver.findElement(By.xpath(xpathFrameBottom));
         driver.switchTo().frame(bottomFrame);
@@ -57,7 +53,6 @@ public class FramesPage extends Services {
 
         WebElement topFrame = driver.findElement(By.xpath(xpathFrameTop));
         driver.switchTo().frame(topFrame);
-
 
         WebElement leftFrame = driver.findElement(By.xpath(xpathFrameLeft));
         driver.switchTo().frame(leftFrame);
@@ -69,12 +64,10 @@ public class FramesPage extends Services {
         driver.switchTo().frame(middleFrame);
 
         System.out.println(driver.findElement(By.xpath("//body")).getText());
-
     }
 
 
     public void getIFrame() throws InterruptedException {
-
         waitForElement(xpathIFrame);
         WebElement iFrame = driver.findElement(By.xpath(xpathIFrame));
         driver.switchTo().frame(iFrame);
@@ -86,7 +79,5 @@ public class FramesPage extends Services {
         editor.sendKeys("Anuj Kumar");
         Thread.sleep(2000);
         System.out.println(editor.getText());
-
     }
-
 }

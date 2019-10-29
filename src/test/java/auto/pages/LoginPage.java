@@ -41,8 +41,6 @@ public class LoginPage extends Services {
     }
 
     public void verifyLogin(String username, String password) {
-
-
         assertAndType(xpathUsername, username);
         assertAndType(xpathPassword, password);
         assertAndClick(xpathLoginBtn);
@@ -60,12 +58,9 @@ public class LoginPage extends Services {
         actualMsg = driver.findElement(By.xpath(xpathMsg)).getText().trim();
         assertTrue(actualMsg.contains(MSG_LOGOUT),
                 "Actual '" + actualMsg + "' should be same as expected '" + MSG_LOGOUT + "'.");
-
     }
 
     public void verifyLoginWithInvalidUser(String username, String password) {
-
-
         assertAndType(xpathUsername, username);
         assertAndType(xpathPassword, password);
         assertAndClick(xpathLoginBtn);
@@ -76,6 +71,4 @@ public class LoginPage extends Services {
         assertTrue(actualMsg.contains(MSG_ERROR),
                 "Actual '" + actualMsg + "' should be same as expected '" + MSG_ERROR + "'.");
     }
-
-
 }

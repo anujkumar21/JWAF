@@ -34,28 +34,24 @@ public class DynamicControlsPage extends Services {
     }
 
     public void verifyRemove() {
-
         assertElementPresentByXpath(xpathCheckbox);
         assertAndClick(xpathBtn);
         waitForLoading();
         assertElementNotPresentByXpath(xpathCheckbox);
-
     }
 
     public void verifyAdd() {
         verifyRemove();
-
         assertAndClick(xpathBtn);
         waitForLoading();
         assertElementPresentByXpath(xpathCheckbox);
     }
 
-    protected void waitForLoading() {
+    private void waitForLoading() {
         waitForElement(xpathLoading);
         waitForElementVisible(xpathLoading);
         assertElementVisible(xpathLoading, true);
         waitForElementInVisible(xpathLoading);
         assertElementVisible(xpathLoading, false);
     }
-
 }

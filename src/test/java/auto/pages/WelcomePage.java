@@ -51,5 +51,4 @@ public class WelcomePage {
         driver.findElement(By.xpath(xpathLink)).click();
         return this;
     }
-
 }

@@ -1,5 +1,5 @@
 package auto.pages;
-/**
+/*
  * Created by: Anuj Kumar
  * Email: cdac.anuj@gmail.com
  * Date: 16-May-18
@@ -28,23 +28,16 @@ public class ContextMenuPage extends Services {
                 "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
     }
 
-
     public void verifyContextMenu() throws InterruptedException {
-
         waitForElement(xpathHotSpot);
         WebElement hotSpotEle = driver.findElement(By.xpath(xpathHotSpot));
 
         Actions actions = new Actions(driver);
-
         actions.contextClick(hotSpotEle).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ENTER).build().perform();
-
         Thread.sleep(2000);
         Alert alert = driver.switchTo().alert();
         alert.accept();
-
     }
-
-
 }

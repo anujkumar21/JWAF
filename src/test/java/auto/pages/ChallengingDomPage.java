@@ -42,26 +42,19 @@ public class ChallengingDomPage extends Services {
     public void getAllButtonText() {
         waitForElement(xpathButtonsViaContains);
         List<WebElement> lstBtns = driver.findElements(By.xpath(xpathButtonsViaContains));
-
-        for (int i = 0; i < lstBtns.size(); i++) {
-            System.out.println(lstBtns.get(i).getText());
+        for (WebElement lstBtn : lstBtns) {
+            System.out.println(lstBtn.getText());
         }
     }
 
     public void clickOnFirstButton() {
-
         String xpath = xpathButtons + "[1]";
-
         assertAndClick(xpath);
-
     }
 
-
     public int getColumnIndex(String columnName) {
-
         waitForElement(xpathTableHeader);
         List<WebElement> lstCols = driver.findElements(By.xpath(xpathTableHeader));
-
         int index = 0;
         for (WebElement col : lstCols) {
             String actualCol = col.getText();
@@ -69,7 +62,6 @@ public class ChallengingDomPage extends Services {
             if (actualCol.equals(columnName)) {
                 return index;
             }
-
         }
 
         assertTrue(false, "Given column name " + columnName + " is not present.");
@@ -77,16 +69,9 @@ public class ChallengingDomPage extends Services {
     }
 
     public String getCellText(int row, String columnName) {
-
         int col = getColumnIndex(columnName);
-
         String xpath = xpathTableCell.replace("**row**", row + "").replace("**col**", col + "");
-
         waitForElement(xpath);
-
         return driver.findElement(By.xpath(xpath)).getText();
-
     }
-
-
 }

@@ -25,18 +25,14 @@ public class FileDownloaderPage extends Services {
         this.driver = driver;
     }
 
-    public FileDownloaderPage verifyFileDownloaderHeader() {
+    public void verifyFileDownloaderHeader() {
         WebElement headerEle = driver.findElement(By.xpath(xpathHeading));
         String actualHeading = headerEle.getText();
         assertEquals(actualHeading, HEADING,
                 "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
-        return this;
     }
 
     public void verifyFileDownload() {
-
         assertAndClick(xpathLink);
-
     }
-
 }

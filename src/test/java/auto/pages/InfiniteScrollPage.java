@@ -20,8 +20,6 @@ public class InfiniteScrollPage extends Services {
     private String xpathHeading = "//h3";
 
     private String xpathImage1 = "//div[@class='figure'][2]";
-    private String xpathName1 = xpathImage1 + "//div[@class='figcaption']/h5";
-
 
     public InfiniteScrollPage(WebDriver driver) {
         super(driver);
@@ -38,25 +36,18 @@ public class InfiniteScrollPage extends Services {
 
     public void scrollVerticallyPage() {
         String myScript = "window.scrollTo(0,document.body.scrollHeight)";
-
         ((JavascriptExecutor) driver).executeScript(myScript);
     }
 
     public void scrollHorizontallyPage() {
         String myScript = "window.scrollBy(400,0)";
-
         ((JavascriptExecutor) driver).executeScript(myScript);
-
     }
 
 
     public void scrollWithinParticularEle() {
-
         String myScript = "arguments[0].scrollIntoView();";
-
         WebElement element = driver.findElement(By.xpath("//td[@class='column-49' and text()='9.49']"));
-
         ((JavascriptExecutor) driver).executeScript(myScript, element);
-
     }
 }

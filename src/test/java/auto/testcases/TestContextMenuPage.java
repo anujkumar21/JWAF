@@ -21,7 +21,5 @@ public class TestContextMenuPage extends Init {
         ContextMenuPage contextMenuPage = new ContextMenuPage(driver);
         contextMenuPage.verifyContextMenuPageHeader();
         contextMenuPage.verifyContextMenu();
-
     }
-
 }

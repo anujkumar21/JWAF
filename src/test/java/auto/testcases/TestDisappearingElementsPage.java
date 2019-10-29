@@ -16,7 +16,6 @@ public class TestDisappearingElementsPage extends Init {
 
     @Test
     public void testChallengingPage() throws InterruptedException {
-
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader()
                 .clickOnLink("Disappearing Elements");
@@ -26,8 +25,5 @@ public class TestDisappearingElementsPage extends Init {
         List<String> tabNames = disappearingElementsPage.getAllTabsName();
         System.out.println(tabNames);
         disappearingElementsPage.verifyDisappearTab("Gallery");
-        Thread.sleep(5000);
-
     }
-
 }

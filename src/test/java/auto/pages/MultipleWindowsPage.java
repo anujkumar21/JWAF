@@ -41,16 +41,11 @@ public class MultipleWindowsPage extends Services {
     }
 
     public void getTextOnNewWindow() throws InterruptedException {
-
         Set<String> windowHandles = driver.getWindowHandles();
-
         System.out.println(windowHandles);
-
         Iterator<String> itr = windowHandles.iterator();
-
         while (itr.hasNext()) {
             String win = itr.next();
-
             driver.switchTo().window(win);
             Thread.sleep(3000);
             if (driver.getTitle().equals("New Window")) {
@@ -58,20 +53,18 @@ public class MultipleWindowsPage extends Services {
                 driver.close();
             }
         }
+
         windowHandles = driver.getWindowHandles();
         System.out.println(windowHandles);
         itr = windowHandles.iterator();
+
         while (itr.hasNext()) {
             String win = itr.next();
-
             driver.switchTo().window(win);
             Thread.sleep(3000);
             if (driver.getTitle().equals("The Internet")) {
                 System.out.println(getWebElement("//h3").getText());
             }
         }
-
-
     }
-
 }

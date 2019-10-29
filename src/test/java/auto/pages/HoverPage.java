@@ -22,7 +22,6 @@ public class HoverPage extends Services {
     private String xpathImage1 = "//div[@class='figure'][2]";
     private String xpathName1 = xpathImage1 + "//div[@class='figcaption']/h5";
 
-
     public HoverPage(WebDriver driver) {
         super(driver);
     }
@@ -36,7 +35,6 @@ public class HoverPage extends Services {
     }
 
     public void hoverOnImage() {
-
         WebElement img1 = driver.findElement(By.xpath(xpathImage1));
         Actions actions = new Actions(driver);
         actions.moveToElement(img1).build().perform();

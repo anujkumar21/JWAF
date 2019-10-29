@@ -23,10 +23,5 @@ public class TestDropdownPage extends Init {
         //dropdownPage.selectDropDown(1);
         dropdownPage.selectDropDown("Option 2");
         //dropdownPage.selectDropDownByValue("2");
-
-
-        Thread.sleep(3000);
-
     }
-
 }
