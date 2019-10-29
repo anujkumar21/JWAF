@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.function.Function;
+
 import static org.apache.log4j.Logger.getLogger;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -35,8 +37,21 @@ public class Services {
         driver.findElement(By.xpath(locator)).click();
     }
 
+    protected void clickViaCss(String locator) {
+        driver.findElement(By.cssSelector(locator)).click();
+    }
+
     protected void type(String locator, String text) {
         driver.findElement(By.xpath(locator)).sendKeys(text);
+    }
+
+    protected void typeViaCss(String locator, String text) {
+        driver.findElement(By.cssSelector(locator)).sendKeys(text);
+    }
+
+    //Java8 way - by same method we can pass all types of locators.
+    protected void type(Function<String, By> locate, String locator, String text) {
+        driver.findElement(locate.apply(locator)).sendKeys(text);
     }
 
     protected void assertElementPresentByXpath(String locator) {
