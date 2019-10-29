@@ -41,21 +41,25 @@ public class LoginPage extends Services {
     }
 
     public void verifyLogin(String username, String password) {
+        loginAction(username, password);
+        waitForElementVisible(xpathMsg);
+        String actualMsg = driver.findElement(By.xpath(xpathMsg)).getText().trim();
+        assertTrue(actualMsg.contains(MSG_SUCCESS),
+                "Actual '" + actualMsg + "' should be same as expected '" + MSG_SUCCESS + "'.");
+    }
+
+    private void loginAction(String username, String password) {
         assertAndType(xpathUsername, username);
         assertAndType(xpathPassword, password);
         assertAndClick(xpathLoginBtn);
+    }
 
-        waitForElementVisible(xpathMsg);
-        String actualMsg = driver.findElement(By.xpath(xpathMsg)).getText().trim();
-
-        assertTrue(actualMsg.contains(MSG_SUCCESS),
-                "Actual '" + actualMsg + "' should be same as expected '" + MSG_SUCCESS + "'.");
-
+    public void verifyLoginAndLogout(String username, String password) {
+        verifyLogin(username, password);
         waitForElementVisible(xpathLogoutBtn);
         assertAndClick(xpathLogoutBtn);
-
         waitForElementVisible(xpathMsg);
-        actualMsg = driver.findElement(By.xpath(xpathMsg)).getText().trim();
+        String actualMsg = driver.findElement(By.xpath(xpathMsg)).getText().trim();
         assertTrue(actualMsg.contains(MSG_LOGOUT),
                 "Actual '" + actualMsg + "' should be same as expected '" + MSG_LOGOUT + "'.");
     }
