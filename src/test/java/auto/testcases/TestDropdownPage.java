@@ -16,7 +16,9 @@ public class TestDropdownPage extends Init {
     public void testDropdownPage() throws InterruptedException {
         System.out.println("testMe");
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dropdown");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Dropdown");
 
         DropdownPage dropdownPage = new DropdownPage(driver);
         dropdownPage.verifyDropdownPageHeader();

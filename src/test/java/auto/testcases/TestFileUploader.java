@@ -15,7 +15,9 @@ public class TestFileUploader extends Init {
     @Test
     public void testFrame() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("File Upload");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("File Upload");
 
         FileUploaderPage fileUploaderPage = new FileUploaderPage(driver);
         fileUploaderPage.verifyFileUploaderHeader();

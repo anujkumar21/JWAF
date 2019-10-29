@@ -16,7 +16,9 @@ public class TestInfiniteScroll extends Init {
     public void testFrame() throws InterruptedException {
         WelcomePage welcomePage = new WelcomePage(driver);
         InfiniteScrollPage infiniteScrollPage = new InfiniteScrollPage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Large & Deep DOM");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Large & Deep DOM");
 
         //infiniteScrollPage.verifyInfiniteScrollPageHeader();
         infiniteScrollPage.scrollWithinParticularEle();

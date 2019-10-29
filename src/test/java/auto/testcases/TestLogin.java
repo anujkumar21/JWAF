@@ -15,8 +15,9 @@ public class TestLogin extends Init {
     @Test
     public void testLogin() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader()
-                .clickOnLink("Form Authentication");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Form Authentication");
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.verifyLoginPageHeader();
@@ -26,8 +27,9 @@ public class TestLogin extends Init {
     @Test
     public void testLoginWithInvalidUser() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader()
-                .clickOnLink("Form Authentication");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Form Authentication");
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.verifyLoginPageHeader();

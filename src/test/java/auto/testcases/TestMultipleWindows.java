@@ -15,7 +15,9 @@ public class TestMultipleWindows extends Init {
     @Test
     public void testFrame() throws InterruptedException {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Multiple Windows");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Multiple Windows");
 
         MultipleWindowsPage multipleWindowsPage = new MultipleWindowsPage(driver);
         multipleWindowsPage.verifyMultipleWindowsPageHeader();

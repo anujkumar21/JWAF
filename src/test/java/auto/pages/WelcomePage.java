@@ -23,19 +23,17 @@ public class WelcomePage {
         this.driver = driver;
     }
 
-    public WelcomePage verifyWelcomePageTitle() {
+    public void verifyWelcomePageTitle() {
         String actualTitle = driver.getTitle();
         assertEquals(actualTitle, TITLE,
                 "Actual title " + actualTitle + " should be same as expected " + TITLE);
-        return this;
     }
 
-    public WelcomePage verifyWelcomePageHeader() {
+    public void verifyWelcomePageHeader() {
         WebElement headerEle = driver.findElement(By.xpath(xpathHeading));
         String actualHeading = headerEle.getText();
         assertEquals(actualHeading, HEADING,
                 "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
-        return this;
     }
 
     public void clickOnLinkViaLinkText(String link) {

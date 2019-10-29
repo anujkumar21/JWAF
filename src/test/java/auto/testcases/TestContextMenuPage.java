@@ -16,7 +16,9 @@ public class TestContextMenuPage extends Init {
     public void testChallengingPage() throws InterruptedException {
 
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Context Menu");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Context Menu");
 
         ContextMenuPage contextMenuPage = new ContextMenuPage(driver);
         contextMenuPage.verifyContextMenuPageHeader();

@@ -15,7 +15,9 @@ public class TestDynamicControls extends Init {
     @Test
     public void testDynamicControlsRemove() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Controls");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Dynamic Controls");
 
         DynamicControlsPage controlsPage = new DynamicControlsPage(driver);
         controlsPage.verifyDynamicControlsPageHeader();
@@ -25,7 +27,9 @@ public class TestDynamicControls extends Init {
     @Test
     public void testDynamicControlsAdd() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Controls");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Dynamic Controls");
 
         DynamicControlsPage controlsPage = new DynamicControlsPage(driver);
         controlsPage.verifyDynamicControlsPageHeader();

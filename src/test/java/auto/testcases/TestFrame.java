@@ -15,7 +15,9 @@ public class TestFrame extends Init {
     @Test
     public void testFrame() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Frames");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Frames");
 
         FramesPage framesPage = new FramesPage(driver);
         framesPage.verifyFramesPageHeader();
@@ -26,7 +28,9 @@ public class TestFrame extends Init {
     @Test
     public void testIFrame() throws InterruptedException {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Frames");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Frames");
 
         FramesPage framesPage = new FramesPage(driver);
         framesPage.verifyFramesPageHeader();

@@ -15,7 +15,9 @@ public class TestKeyPresses extends Init {
     @Test
     public void testKeyPresses() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Key Presses");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Key Presses");
 
         KeyPressesPage keyPressesPage = new KeyPressesPage(driver);
         keyPressesPage.verifyKeyPressesPageHeader();

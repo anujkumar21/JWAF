@@ -15,7 +15,9 @@ public class TestLargeDeepDOM extends Init {
     @Test
     public void testLargeDeepDOM() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Large & Deep DOM");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Large & Deep DOM");
 
         LargeDeepDOMPage deepDOMPage = new LargeDeepDOMPage(driver);
         deepDOMPage.verifyLargeDeepDOMPageHeader();

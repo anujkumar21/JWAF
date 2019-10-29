@@ -15,7 +15,9 @@ public class TestDynamicLoadings extends Init {
     @Test
     public void testDynamicLoadingsHidden() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Loading");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Dynamic Loading");
 
         DynamicLoadingsPage dynamicloadingsPage = new DynamicLoadingsPage(driver);
         dynamicloadingsPage.verifyDynamicControlsPageHeader();
@@ -26,7 +28,9 @@ public class TestDynamicLoadings extends Init {
     @Test
     public void testDynamicLoadingsRender() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Dynamic Loading");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Dynamic Loading");
 
         DynamicLoadingsPage dynamicloadingsPage = new DynamicLoadingsPage(driver);
         dynamicloadingsPage.verifyDynamicControlsPageHeader();

@@ -14,6 +14,7 @@ public class TestWelcomePage extends Init {
     @Test
     public void testWelcomePage() {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader();
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
     }
 }

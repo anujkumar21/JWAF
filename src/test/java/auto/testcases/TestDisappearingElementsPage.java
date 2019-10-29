@@ -17,8 +17,9 @@ public class TestDisappearingElementsPage extends Init {
     @Test
     public void testChallengingPage() throws InterruptedException {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader()
-                .clickOnLink("Disappearing Elements");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Disappearing Elements");
 
         DisappearingElementsPage disappearingElementsPage = new DisappearingElementsPage(driver);
         disappearingElementsPage.verifyDisappearingElementsPageHeader();

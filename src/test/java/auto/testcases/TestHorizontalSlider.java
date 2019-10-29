@@ -15,7 +15,9 @@ public class TestHorizontalSlider extends Init {
     @Test
     public void testFrame() throws InterruptedException {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Horizontal Slider");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Horizontal Slider");
 
         HorizontalSliderPage horizontalSliderPage = new HorizontalSliderPage(driver);
         horizontalSliderPage.verifyHorizontalSliderPageHeader();

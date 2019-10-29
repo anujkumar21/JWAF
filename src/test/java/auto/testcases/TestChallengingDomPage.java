@@ -15,7 +15,9 @@ public class TestChallengingDomPage extends Init {
     @Test
     public void testChallengingPage() throws InterruptedException {
         WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.verifyWelcomePageTitle().verifyWelcomePageHeader().clickOnLink("Challenging DOM");
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Challenging DOM");
 
         ChallengingDomPage challengingDomPage = new ChallengingDomPage(driver);
         challengingDomPage.verifyChallengingDomPageHeader();
