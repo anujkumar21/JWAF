@@ -49,6 +49,15 @@ public class Services {
         driver.findElement(By.cssSelector(locator)).sendKeys(text);
     }
 
+    protected void type(String method, String locator, String text) {
+        if (method.equalsIgnoreCase("xpath"))
+            driver.findElement(By.xpath(locator)).sendKeys(text);
+        else if (method.equalsIgnoreCase("css"))
+            driver.findElement(By.cssSelector(locator)).sendKeys(text);
+        else
+            driver.findElement(By.id(locator)).sendKeys(text);
+    }
+
     //Java8 way - by same method we can pass all types of locators.
     protected void type(Function<String, By> locate, String locator, String text) {
         driver.findElement(locate.apply(locator)).sendKeys(text);
