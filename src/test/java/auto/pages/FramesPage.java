@@ -40,7 +40,7 @@ public class FramesPage extends Services {
 
     public void clickOnLink(String link) {
         String xpath = xpathLinks.replace("**link**", link);
-        assertAndClick(xpath);
+        click(xpath);
     }
 
     public void getFrameText() {

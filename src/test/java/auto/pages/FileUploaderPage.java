@@ -35,8 +35,8 @@ public class FileUploaderPage extends Services {
     }
 
     public void verifyFileUpload() {
-        assertAndType(xpathChooseFile, "E:\\eclipse\\selLearning\\download\\menu.pdf");
-        assertAndClick(xpathBtn);
+        type(xpathChooseFile, "E:\\eclipse\\selLearning\\download\\menu.pdf");
+        click(xpathBtn);
         waitForElement(xpathResult);
         assertEquals("menu.pdf", getWebElement(xpathResult).getText().trim());
     }

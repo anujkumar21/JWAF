@@ -49,7 +49,7 @@ public class ChallengingDomPage extends Services {
 
     public void clickOnFirstButton() {
         String xpath = xpathButtons + "[1]";
-        assertAndClick(xpath);
+        click(xpath);
     }
 
     public int getColumnIndex(String columnName) {

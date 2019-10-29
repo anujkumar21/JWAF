@@ -41,7 +41,7 @@ public class DynamicLoadingsPage extends Services {
     public void clickOnLink(String link) {
 
         String xpath = xpathLinks.replace("**link**", link);
-        assertAndClick(xpath);
+        click(xpath);
         waitForElement(xpathSubHeading);
         String actualHeading = driver.findElement(By.xpath(xpathSubHeading)).getText();
 
@@ -55,7 +55,7 @@ public class DynamicLoadingsPage extends Services {
     public void makeHiddenElementVisible() {
         assertElementPresentByXpath(xpathFinish);
         assertElementVisible(xpathFinish, false);
-        assertAndClick(xpathBtn);
+        click(xpathBtn);
         waitForLoading();
         assertElementPresentByXpath(xpathFinish);
         assertElementVisible(xpathFinish, true);
@@ -63,7 +63,7 @@ public class DynamicLoadingsPage extends Services {
 
     public void renderNewElement() {
         assertElementNotPresentByXpath(xpathFinish);
-        assertAndClick(xpathBtn);
+        click(xpathBtn);
         waitForLoading();
         assertElementPresentByXpath(xpathFinish);
         assertElementVisible(xpathFinish, true);

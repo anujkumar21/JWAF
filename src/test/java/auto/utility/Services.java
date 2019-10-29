@@ -31,13 +31,11 @@ public class Services {
         new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
     }
 
-    protected void assertAndClick(String locator) {
-        assertElementPresentByXpath(locator);
+    protected void click(String locator) {
         driver.findElement(By.xpath(locator)).click();
     }
 
-    protected void assertAndType(String locator, String text) {
-        assertElementPresentByXpath(locator);
+    protected void type(String locator, String text) {
         driver.findElement(By.xpath(locator)).sendKeys(text);
     }
 

@@ -37,7 +37,7 @@ public class MultipleWindowsPage extends Services {
     }
 
     public void clickOnLink() {
-        assertAndClick(xpathLink);
+        click(xpathLink);
     }
 
     public void getTextOnNewWindow() throws InterruptedException {

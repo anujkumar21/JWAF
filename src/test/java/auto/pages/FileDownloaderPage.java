@@ -33,6 +33,6 @@ public class FileDownloaderPage extends Services {
     }
 
     public void verifyFileDownload() {
-        assertAndClick(xpathLink);
+        click(xpathLink);
     }
 }

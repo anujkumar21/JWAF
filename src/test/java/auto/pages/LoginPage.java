@@ -49,15 +49,15 @@ public class LoginPage extends Services {
     }
 
     private void loginAction(String username, String password) {
-        assertAndType(xpathUsername, username);
-        assertAndType(xpathPassword, password);
-        assertAndClick(xpathLoginBtn);
+        type(xpathUsername, username);
+        type(xpathPassword, password);
+        click(xpathLoginBtn);
     }
 
     public void verifyLoginAndLogout(String username, String password) {
         verifyLogin(username, password);
         waitForElementVisible(xpathLogoutBtn);
-        assertAndClick(xpathLogoutBtn);
+        click(xpathLogoutBtn);
         waitForElementVisible(xpathMsg);
         String actualMsg = driver.findElement(By.xpath(xpathMsg)).getText().trim();
         assertTrue(actualMsg.contains(MSG_LOGOUT),
@@ -65,9 +65,9 @@ public class LoginPage extends Services {
     }
 
     public void verifyLoginWithInvalidUser(String username, String password) {
-        assertAndType(xpathUsername, username);
-        assertAndType(xpathPassword, password);
-        assertAndClick(xpathLoginBtn);
+        type(xpathUsername, username);
+        type(xpathPassword, password);
+        click(xpathLoginBtn);
 
         waitForElementVisible(xpathMsg);
         String actualMsg = driver.findElement(By.xpath(xpathMsg)).getText().trim();
