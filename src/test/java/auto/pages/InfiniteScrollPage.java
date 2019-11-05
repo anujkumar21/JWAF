@@ -1,11 +1,5 @@
 package auto.pages;
 
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 21-May-18
- */
-
 import auto.utility.Services;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -14,6 +8,11 @@ import org.openqa.selenium.WebElement;
 
 import static org.testng.Assert.assertEquals;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 21-May-18
+ */
 public class InfiniteScrollPage extends Services {
 
     private final static String HEADING = "Infinite Scroll";

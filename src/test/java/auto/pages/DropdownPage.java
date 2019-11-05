@@ -1,9 +1,4 @@
 package auto.pages;
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 12-May-18
- */
 
 import auto.utility.Services;
 import org.openqa.selenium.By;
@@ -13,6 +8,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import static org.testng.Assert.assertEquals;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 12-May-18
+ */
 public class DropdownPage extends Services {
 
     final static String HEADING = "Dropdown List";

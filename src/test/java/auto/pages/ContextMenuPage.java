@@ -1,9 +1,4 @@
 package auto.pages;
-/*
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 16-May-18
- */
 
 import auto.utility.Services;
 import org.openqa.selenium.*;
@@ -11,6 +6,11 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.testng.Assert.assertEquals;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 16-May-18
+ */
 public class ContextMenuPage extends Services {
 
     private final static String HEADING = "Context Menu";

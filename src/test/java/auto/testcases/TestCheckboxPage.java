@@ -21,7 +21,8 @@ public class TestCheckboxPage extends Init {
         welcomePage.clickOnLink("Checkboxes");
 
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
-        checkboxesPage.verifyCheckboxPageHeader().clickOnCheckbox(3);
+        checkboxesPage.verifyCheckboxPageHeader();
+        checkboxesPage.clickOnCheckbox(3);
     }
 
     @Test
@@ -32,7 +33,8 @@ public class TestCheckboxPage extends Init {
         welcomePage.clickOnLink("Checkboxes");
 
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
-        checkboxesPage.verifyCheckboxPageHeader().clickOnCheckbox(2, false);
+        checkboxesPage.verifyCheckboxPageHeader();
+        checkboxesPage.clickOnCheckbox(2, false);
     }
 
     @Test
@@ -43,7 +45,8 @@ public class TestCheckboxPage extends Init {
         welcomePage.clickOnLink("Checkboxes");
 
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
-        checkboxesPage.verifyCheckboxPageHeader().toSelectAllCheckboxes(false);
+        checkboxesPage.verifyCheckboxPageHeader();
+        checkboxesPage.toSelectAllCheckboxes(false);
     }
 
 }

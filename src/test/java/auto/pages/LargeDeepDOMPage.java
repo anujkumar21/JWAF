@@ -1,9 +1,4 @@
 package auto.pages;
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 16-May-18
- */
 
 import auto.utility.Services;
 import org.openqa.selenium.By;
@@ -12,6 +7,11 @@ import org.openqa.selenium.WebElement;
 
 import static org.testng.Assert.assertEquals;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 16-May-18
+ */
 public class LargeDeepDOMPage extends Services {
 
     static final String FOLLOWING_SIBLINGS_XPATH =

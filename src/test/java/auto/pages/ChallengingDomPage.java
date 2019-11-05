@@ -1,9 +1,4 @@
 package auto.pages;
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 12-May-18
- */
 
 import auto.utility.Services;
 import org.openqa.selenium.By;
@@ -13,8 +8,13 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 12-May-18
+ */
 public class ChallengingDomPage extends Services {
 
     final static String HEADING = "Challenging DOM";
@@ -64,7 +64,7 @@ public class ChallengingDomPage extends Services {
             }
         }
 
-        assertTrue(false, "Given column name " + columnName + " is not present.");
+        fail("Given column name " + columnName + " is not present.");
         return index;
     }
 

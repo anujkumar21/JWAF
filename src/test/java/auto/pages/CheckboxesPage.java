@@ -1,9 +1,4 @@
 package auto.pages;
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 12-May-18
- */
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +8,11 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 12-May-18
+ */
 public class CheckboxesPage {
 
     final static String HEADING = "Checkboxes";

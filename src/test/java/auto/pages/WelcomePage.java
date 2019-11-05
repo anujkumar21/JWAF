@@ -1,9 +1,4 @@
 package auto.pages;
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 12-May-18
- */
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +6,11 @@ import org.openqa.selenium.WebElement;
 
 import static org.testng.Assert.assertEquals;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 12-May-18
+ */
 public class WelcomePage {
 
     final static String TITLE = "The Internet";
