@@ -1,15 +1,15 @@
 package auto.testcases;
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 21-May-18
- */
 
 import auto.pages.FramesPage;
 import auto.pages.WelcomePage;
 import auto.utility.Init;
 import org.testng.annotations.Test;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 21-May-18
+ */
 public class TestFrame extends Init {
 
     @Test

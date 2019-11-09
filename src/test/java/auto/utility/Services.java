@@ -22,6 +22,7 @@ import static org.testng.Assert.assertTrue;
  */
 
 public class Services {
+
     private static Logger logger = getLogger(Services.class.getName());
     protected WebDriver driver;
 

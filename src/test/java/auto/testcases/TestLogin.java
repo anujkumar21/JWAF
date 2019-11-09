@@ -1,9 +1,4 @@
 package auto.testcases;
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 21-May-18
- */
 
 import auto.pages.LoginPage;
 import auto.pages.WelcomePage;
@@ -13,6 +8,11 @@ import org.testng.annotations.Test;
 import static auto.pages.LoginPage.MSG_SUCCESS;
 import static org.testng.Assert.assertTrue;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 21-May-18
+ */
 public class TestLogin extends Init {
 
     @Test

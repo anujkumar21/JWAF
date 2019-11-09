@@ -16,7 +16,6 @@ import static org.testng.Assert.assertEquals;
  * Email: cdac.anuj@gmail.com
  * Date: 21-May-18
  */
-
 public class AlertPage extends Services {
 
     private static Logger logger = getLogger(AlertPage.class.getName());

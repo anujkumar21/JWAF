@@ -1,9 +1,4 @@
 package auto.utility;
-/*
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 12-May-18
- */
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +9,11 @@ import java.util.concurrent.TimeUnit;
 
 import static org.apache.log4j.Logger.getLogger;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 12-May-18
+ */
 public class Init extends DriverFactory {
 
     static Logger logger = getLogger(Init.class.getName());

@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
  * Email: cdac.anuj@gmail.com
  * Date: 12-May-18
  */
-
 public class TestCheckboxPage extends Init {
 
     @Test

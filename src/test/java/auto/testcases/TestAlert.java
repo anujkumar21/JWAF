@@ -1,15 +1,15 @@
 package auto.testcases;
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 21-May-18
- */
 
 import auto.pages.AlertPage;
 import auto.pages.WelcomePage;
 import auto.utility.Init;
 import org.testng.annotations.Test;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 21-May-18
+ */
 public class TestAlert extends Init {
 
     @Test(groups = {"smoke", "regression"})

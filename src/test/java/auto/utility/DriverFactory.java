@@ -1,11 +1,5 @@
 package auto.utility;
 
-/**
- * Created by: Anuj Kumar
- * Email: cdac.anuj@gmail.com
- * Date: 19-Apr-19
- */
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +9,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import static org.apache.log4j.Logger.getLogger;
 
+/**
+ * Created by: Anuj Kumar
+ * Email: cdac.anuj@gmail.com
+ * Date: 19-Apr-19
+ */
 public class DriverFactory {
     private static Logger logger = getLogger(DriverFactory.class.getName());
 
