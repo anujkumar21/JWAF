@@ -5,6 +5,10 @@ import auto.pages.WelcomePage;
 import auto.utility.Init;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
+import static org.testng.Assert.assertEquals;
+
 /**
  * Created by: Anuj Kumar
  * Email: cdac.anuj@gmail.com
@@ -13,7 +17,7 @@ import org.testng.annotations.Test;
 public class TestChallengingDomPage extends Init {
 
     @Test
-    public void testChallengingPage() throws InterruptedException {
+    public void testChallengingPage() {
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle();
         welcomePage.verifyWelcomePageHeader();
@@ -21,11 +25,31 @@ public class TestChallengingDomPage extends Init {
 
         ChallengingDomPage challengingDomPage = new ChallengingDomPage(driver);
         challengingDomPage.verifyChallengingDomPageHeader();
-        challengingDomPage.getAllButtonText();
-        challengingDomPage.clickOnFirstButton();
+    }
 
-        System.out.println(challengingDomPage.getColumnIndex("Sit"));
+    @Test
+    public void testListOfButtons() {
+        WelcomePage welcomePage = new WelcomePage(driver);
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Challenging DOM");
 
-        System.out.println(challengingDomPage.getCellText(3, "Sit"));
+        ChallengingDomPage challengingDomPage = new ChallengingDomPage(driver);
+        challengingDomPage.verifyChallengingDomPageHeader();
+        List<String> buttons = challengingDomPage.getAllButtonText();
+        assertEquals(buttons.size(), 3);
+    }
+
+    @Test
+    public void testCellText() {
+        WelcomePage welcomePage = new WelcomePage(driver);
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Challenging DOM");
+
+        ChallengingDomPage challengingDomPage = new ChallengingDomPage(driver);
+        challengingDomPage.verifyChallengingDomPageHeader();
+
+        assertEquals(challengingDomPage.getCellText(3, "Sit"), "Definiebas2");
     }
 }

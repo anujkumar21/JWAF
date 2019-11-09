@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
@@ -39,12 +40,14 @@ public class ChallengingDomPage extends Services {
                 "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
     }
 
-    public void getAllButtonText() {
+    public List<String> getAllButtonText() {
         waitForElement(xpathButtonsViaContains);
         List<WebElement> lstBtns = driver.findElements(By.xpath(xpathButtonsViaContains));
+        List<String> buttons = new ArrayList<>();
         for (WebElement lstBtn : lstBtns) {
-            System.out.println(lstBtn.getText());
+            buttons.add(lstBtn.getText());
         }
+        return buttons;
     }
 
     public void clickOnFirstButton() {

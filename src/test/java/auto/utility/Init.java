@@ -5,8 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import java.util.concurrent.TimeUnit;
-
+import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.apache.log4j.Logger.getLogger;
 
 /**
@@ -16,9 +15,11 @@ import static org.apache.log4j.Logger.getLogger;
  */
 public class Init extends DriverFactory {
 
-    static Logger logger = getLogger(Init.class.getName());
+    private static final String URL = "http://the-internet.herokuapp.com/";
 
     protected WebDriver driver = null;
+    private static final long IMPLICIT_TIME = 5;
+    private static Logger logger = getLogger(Init.class.getName());
 
     /**
      * This function is used for doing web driver setup.
@@ -27,8 +28,8 @@ public class Init extends DriverFactory {
     public void setUp() {
         logger.info("# Setup.");
         driver = getDriver();
-        driver.get("http://the-internet.herokuapp.com/");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.get(URL);
+        driver.manage().timeouts().implicitlyWait(IMPLICIT_TIME, SECONDS);
         driver.manage().window().maximize();
     }
 
