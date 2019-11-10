@@ -41,6 +41,20 @@ public class TestChallengingDomPage extends Init {
     }
 
     @Test
+    public void testChallengingPageViaJava8() {
+        WelcomePage welcomePage = new WelcomePage(driver);
+        welcomePage.verifyWelcomePageTitle();
+        welcomePage.verifyWelcomePageHeader();
+        welcomePage.clickOnLink("Challenging DOM");
+
+        ChallengingDomPage challengingDomPage = new ChallengingDomPage(driver);
+        challengingDomPage.verifyChallengingDomPageHeader();
+        List<String> lst = challengingDomPage.getAllButtonTextJava8();
+        System.out.println(lst);
+        assertEquals(lst.size(), 3);
+    }
+
+    @Test
     public void testCellText() {
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.verifyWelcomePageTitle();

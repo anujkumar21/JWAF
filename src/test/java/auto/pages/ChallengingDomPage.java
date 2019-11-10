@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
@@ -44,10 +45,18 @@ public class ChallengingDomPage extends Services {
         waitForElement(xpathButtonsViaContains);
         List<WebElement> lstBtns = driver.findElements(By.xpath(xpathButtonsViaContains));
         List<String> buttons = new ArrayList<>();
-        for (WebElement lstBtn : lstBtns) {
-            buttons.add(lstBtn.getText());
+        for (WebElement btn : lstBtns) {
+            buttons.add(btn.getText());
         }
         return buttons;
+    }
+
+    public List<String> getAllButtonTextJava8() {
+        waitForElement(xpathButtonsViaContains);
+        return driver.findElements(By.xpath(xpathButtonsViaContains))
+                .stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
     }
 
     public void clickOnFirstButton() {
