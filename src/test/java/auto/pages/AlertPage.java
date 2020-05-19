@@ -1,14 +1,14 @@
 package auto.pages;
 
 import auto.utility.Services;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import static org.apache.log4j.Logger.getLogger;
+import static org.apache.logging.log4j.LogManager.getLogger;
 import static org.testng.Assert.assertEquals;
 
 /**

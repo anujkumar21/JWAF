@@ -1,6 +1,6 @@
 package auto.utility;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.function.Function;
 
-import static org.apache.log4j.Logger.getLogger;
+import static org.apache.logging.log4j.LogManager.getLogger;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 

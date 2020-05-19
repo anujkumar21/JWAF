@@ -1,12 +1,12 @@
 package auto.utility;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
-import static org.apache.log4j.Logger.getLogger;
+import static org.apache.logging.log4j.LogManager.getLogger;
 
 /**
  * Created by: Anuj Kumar
