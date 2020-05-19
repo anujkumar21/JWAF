@@ -4,3 +4,6 @@
 /test-output/
 .settings/
 /log/
+/drivers/
+.DS_Store
+.idea
