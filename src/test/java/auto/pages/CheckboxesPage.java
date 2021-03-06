@@ -25,18 +25,16 @@ public class CheckboxesPage {
         this.driver = driver;
     }
 
-    public CheckboxesPage verifyCheckboxPageHeader() {
+    public void verifyCheckboxPageHeader() {
         WebElement headerEle = driver.findElement(By.xpath(xpathHeading));
         String actualHeading = headerEle.getText();
         assertEquals(actualHeading, HEADING,
                 "Actual heading '" + actualHeading + "' should be same as expected '" + HEADING + "'.");
-        return this;
     }
 
-    public CheckboxesPage clickOnCheckbox(int index) {
+    public void clickOnCheckbox(int index) {
         String xpath = xpathCheckbox.replace("**index**", index + "");
         driver.findElement(By.xpath(xpath)).click();
-        return this;
     }
 
     public void clickOnCheckbox(int index, boolean toSelect) {

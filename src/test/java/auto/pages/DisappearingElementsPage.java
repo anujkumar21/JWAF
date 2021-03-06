@@ -38,8 +38,8 @@ public class DisappearingElementsPage extends Services {
         List<String> tabNames = new ArrayList<String>();
 
         List<WebElement> lstTabs = driver.findElements(By.xpath(xpathMenu));
-        for (WebElement ttab : lstTabs) {
-            tabNames.add(ttab.getText());
+        for (WebElement tab : lstTabs) {
+            tabNames.add(tab.getText());
         }
         return tabNames;
     }
