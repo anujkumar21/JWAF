@@ -110,4 +110,8 @@ public class Services {
     protected WebElement getWebElement(String xpath) {
         return driver.findElement(By.xpath(xpath));
     }
+
+    public String getText(String xpath) {
+        return driver.findElement(By.xpath(xpath)).getText();
+    }
 }
