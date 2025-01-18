@@ -8,8 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.function.Function;
 
+import static java.time.Duration.ofSeconds;
 import static org.apache.logging.log4j.LogManager.getLogger;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -31,7 +33,7 @@ public class Services {
     }
 
     public void waitForElement(String locator) {
-        new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+        new WebDriverWait(driver, ofSeconds(20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
     }
 
     protected void click(String locator) {
@@ -100,11 +102,11 @@ public class Services {
     }
 
     protected void waitForElementVisible(String locator) {
-        new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+        new WebDriverWait(driver, ofSeconds(20)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
 
     protected void waitForElementInVisible(String locator) {
-        new WebDriverWait(driver, 20).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
+        new WebDriverWait(driver, ofSeconds(20)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
     }
 
     protected WebElement getWebElement(String xpath) {
